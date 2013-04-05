@@ -1,0 +1,45 @@
+﻿#
+# $Id: wt_xml_pull.ps1,v 1.2 2009/10/31 15:17:34 powem Exp $
+# wt_xml_pull.ps1
+# 11 March 2009
+# This script retrieves a data feed from WebTrends online web services
+# ------------------------------------------------------------------------------
+
+[string]$username = "mpowe@technologyleaders.com";
+[string]$password = "Pa55w0rd";
+
+function getConnection(){
+
+}
+
+function getReport(){
+
+}
+
+
+# SIG # Begin signature block
+# MIIEYAYJKoZIhvcNAQcCoIIEUTCCBE0CAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
+# gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUpkIR2wXpLVuZDFeEvGJwIz4N
+# 4tCgggJfMIICWzCCAcigAwIBAgIQjNLSgu4Wb4tPRnEUyex1mzAJBgUrDgMCHQUA
+# MDcxNTAzBgNVBAMTLHBkeHBvd2VtMDEgUG93ZXJzaGVsbCBMb2NhbCBDZXJ0aWZp
+# Y2F0ZSBSb290MB4XDTExMTEzMDE5MDUyMloXDTM5MTIzMTIzNTk1OVowJTEjMCEG
+# A1UEAxMacGR4cG93ZW0wMSBQb3dlcnNoZWxsIFVzZXIwgZ8wDQYJKoZIhvcNAQEB
+# BQADgY0AMIGJAoGBALDuI8InrCqUQ8Z7kcQY9CquTznx3rGHcyFb1EzI44Kqqw8P
+# NJABLaET0jhUvxRq9AAQgDJkFurQ2IMwidNcIY7Sduu6gSGAQsyZfyz/AzkbA2rS
+# zv1tO33Be1KCTYGN6JQLRPeKTuyKsIAB86zsx21nAUj1VVlXJyw4k+Vq/lQLAgMB
+# AAGjgYEwfzATBgNVHSUEDDAKBggrBgEFBQcDAzBoBgNVHQEEYTBfgBAM3Fd9jUm1
+# Nw5g7ENg9Iz/oTkwNzE1MDMGA1UEAxMscGR4cG93ZW0wMSBQb3dlcnNoZWxsIExv
+# Y2FsIENlcnRpZmljYXRlIFJvb3SCEFmxQw4TgGCXQWHOO1CpeXowCQYFKw4DAh0F
+# AAOBgQAEGgsNnT5Q5NFod8S1J9ahB6+Kjx4ovPJG3+WC7vW9vR9atNrhlaAyfBIZ
+# HW5Rza0IqP/WyOel6yMziUyrBqTBap2qiCThcdnjAPNrOhxP2ie2VSWft/HyDirW
+# WLTn71Gj9nOb5G6QDPRIPETpbjwkvl2U4EP4gQ5vfUwUaCskPzGCAWswggFnAgEB
+# MEswNzE1MDMGA1UEAxMscGR4cG93ZW0wMSBQb3dlcnNoZWxsIExvY2FsIENlcnRp
+# ZmljYXRlIFJvb3QCEIzS0oLuFm+LT0ZxFMnsdZswCQYFKw4DAhoFAKB4MBgGCisG
+# AQQBgjcCAQwxCjAIoAKAAKECgAAwGQYJKoZIhvcNAQkDMQwGCisGAQQBgjcCAQQw
+# HAYKKwYBBAGCNwIBCzEOMAwGCisGAQQBgjcCARUwIwYJKoZIhvcNAQkEMRYEFLFo
+# MjWFefy0CzPXNXKgilHerOzlMA0GCSqGSIb3DQEBAQUABIGApX4tBH7mApQiyiNu
+# 41HmveTCjNTVvL51U8Za+uisrGD6D1LjVpsBvo+Z81Y2Tq514JKSsC5tlsJNvjbo
+# VGgXJ+3SKAhouZlnzCuREySsenDXrzsmPGu0taAhPP7W0mG31cFML/Zdf0lHtMyi
+# rgvX4ZeOxIUn77wuXjaWUH+ahcg=
+# SIG # End signature block
