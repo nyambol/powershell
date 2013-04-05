@@ -48,6 +48,24 @@ Add-Type -AssemblyName System.Web
 $Env:sdcfields = "date time c-ip cs-username cs-host cs-method cs-uri-stem cs-uri-query sc-status sc-bytes cs-version cs(User-Agent) cs(Cookie) cs(Referer) dcs-id"
 $Env:sdcregex = "[^ ]+ [^ ]+ [^ ]+ [^ ]+ (?<host>[^ ]+) [^ ]+ (?<uri>[^ ]+) (?<query>[^ ]+) [^ ]+ [^ ]+ [^ ]+ [^ ]+ [^ ]+ (?<referrer>[^ ]+) [^ ]+"
 
+# Location for PowerShell scripts and modules
+$psScripts = "c:\powershell";
+$psUserHome = "c:\Users\powem\Documents\WindowsPowerShell";
+$psUserModule = "C:\Users\powem\Documents\WindowsPowerShell\Modules";
+
+$wtPsd1 = "WebTrends-Module.psd1";
+$wtPsm1 = "WebTrends-Module.psm1";
+$prof = "profile.ps1";
+
+$wtPsd1Dev  = Join-Path $psScripts $wtPsd1;
+$wtPsd1Prod = Join-Path $psUserModule $wtPsd1;
+
+$wtPsm1Dev  = Join-Path $psScripts $wtPsm1;
+$wtPsm1Prod = Join-Path $psUserModule $wtPsm1;
+
+$profDev  = Join-Path $psScripts $prof;
+$profProd = Join-Path $psUserHome $prof;
+
 #endregion
 
 #region Display Settings
@@ -309,8 +327,8 @@ function Copy-WtModule{
 #>
 
 
-    if ((Get-Item "c:\powershell\WebTrends-Module.psd1").LastWriteTime -gt (Get-Item "c:\Users\powem\Documents\WindowsPowerShell\Modules\WebTrends-Module\WebTrends-Module.psd1").LastWriteTime){
-        Copy-Item -Path "c:\powershell\WebTrends-Module.psd1" -Destination "c:\Users\powem\Documents\WindowsPowerShell\Modules\WebTrends-Module\";
+    if ((Get-Item $wtPsd1).LastWriteTime -gt (Get-Item $wtPsd1Prod).LastWriteTime){
+        Copy-Item -Path $wtPsd1 -Destination "c:\Users\powem\Documents\WindowsPowerShell\Modules\WebTrends-Module\";
         Write-Host "New manifest file copied over.";
     }
 
