@@ -327,13 +327,13 @@ function Copy-WtModule{
 #>
 
 
-    if ((Get-Item $wtPsd1).LastWriteTime -gt (Get-Item $wtPsd1Prod).LastWriteTime){
-        Copy-Item -Path $wtPsd1 -Destination "c:\Users\powem\Documents\WindowsPowerShell\Modules\WebTrends-Module\";
+    if ((Get-Item $wtPsd1Dev).LastWriteTime -gt (Get-Item $wtPsd1Prod).LastWriteTime){
+        Copy-Item -Path $wtPsd1Dev -Destination $psUserModule;
         Write-Host "New manifest file copied over.";
     }
 
-	if ((Get-Item "c:\powershell\WebTrends-Module.psm1").LastWriteTime -gt (Get-Item "c:\Users\powem\Documents\WindowsPowerShell\Modules\WebTrends-Module\WebTrends-Module.psm1").LastWriteTime){
-		Copy-Item -Path "c:\powershell\WebTrends-Module.psm1" -Destination "c:\Users\powem\Documents\WindowsPowerShell\Modules\WebTrends-Module\";
+	if ((Get-Item $wtPsm1Dev).LastWriteTime -gt (Get-Item $wtPsm1Prod).LastWriteTime){
+		Copy-Item -Path $wtPsm1Dev -Destination $psUserModule;
 		Write-Host "New Webtrends module file copied over."
 		Write-Host "Removing WebTrends-Module...";
 		Remove-Module WebTrends-Module
